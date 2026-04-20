@@ -1,0 +1,217 @@
+body {
+    font-family: Andale Mono, monospace;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f5f6f8, #e9ecf1);
+    color: #222;
+}
+
+header {
+    font-family: Impact, fantasy;
+    font-weight: 200;
+    background: linear-gradient(135deg, #c7ccd6, #b8bec8);
+    color: #222;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.top-bar,
+.inline-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+input,
+button,
+select {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: #00a896;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: #007f73;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 150, 130, 0.3);
+}
+
+.routine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.routine-card {
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.routine-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.routine-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.secondary-btn {
+    background: #444;
+}
+
+.danger-btn {
+    background: #c0392b;
+}
+
+.exercise-card {
+    background: white;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.exercise-card h3 {
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #f0f0f0;
+}
+
+.previous-week {
+    color: rgba(0, 0, 0, 0.65);
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
+
+.section-title {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.small-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+.back-btn {
+    margin-bottom: 15px;
+    background: #444;
+}
+
+.summary-card {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.summary-list {
+    display: grid;
+    gap: 8px;
+}
+
+.history-box {
+    margin-top: 10px;
+    padding: 10px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#authSection {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+#authSection h2 {
+    margin-top: 0;
+}
+
+#authSection input {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 12px;
+}
+
+#authSection button {
+    margin-bottom: 20px;
+}
+
+input,
+select {
+    min-width: 140px;
+}
+
+.top-bar input,
+.inline-group input,
+.inline-group select {
+    flex: 1;
+}
+
+#progressChart {
+    width: 100% !important;
+    max-height: 320px;
+}
+
+#homePage {
+    margin-top: 20px;
+}
+
+.exercise-card {
+    overflow-x: auto;
+}

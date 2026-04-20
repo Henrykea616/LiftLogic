@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiftLogic</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Lift Logic</h1>
+    </header>
+    
+    <h2>Log In</h2>
+    <input type="email" id="loginEmail" placeholder="Email" />
+    <input type="password" id="loginPassowrd" placeholder="Password" />
+    <button on click="handleLogin()">Log In</button>
+
+    <div class="container">
+        <div id="homePage">
+            <div class="top-bar">
+                <input
+                    type="text"
+                    id="routineNameInput"
+                    placeholder="Enter workout routine name"
+                />
+                <button onclick="createRoutine()">Create Routine</button>
+            </div>
+
+            <h2>Your Workout Directory</h2>
+            <div id="routineGrid" class="routine-grid"></div>
+
+            <h2 class="section-title">Body Part Summary</h2>
+            <div id="bodyPartSummary"></div>
+        </div>
+
+        <div id="authSection">
+            <h2>Sign Up</h2>
+            <input type="email" id="signupEmail" placeholder="Email" />
+            <input type="password" id="signupPassword" placeholder="Password" />
+            <button onclick="handleSignup()">Sign Up</button>
+        </div>
+
+        <div id="routinePage" class="hidden">
+            <button class="back-btn" onclick="goHome()">← Back to Directory</button>
+            <h2 id="routinePageTitle"></h2>
+
+            <div class="inline-group">
+                <label for="weekSelect"><strong>Week:</strong></label>
+                <select id="weekSelect" onchange="renderRoutinePage()"></select>
+                <button class="secondary-btn small-btn" onclick="addWeek()">+ Add Week</button>
+                <button class="secondary-btn small-btn" onclick="completeWorkout()">Finish Workout</button>
+                
+                
+                
+            </div>
+
+            <div class="inline-group">
+                <input
+                    type="text"
+                    id="exerciseNameInput"
+                    placeholder="Exercise name"
+                />
+
+                <select id="bodyPartInput">
+                    <option value="Chest">Chest</option>
+                    <option value="UpperChest">Upper Chest</option>
+                    <option value="Lats">Lats</option>
+                    <option value="MidBack">Mid Back</option>
+                    <option value="SideDelts">Side Delts</option>
+                    <option value="FrontDelts">Front Delts</option>
+                    <option value="RearDelts">Rear Delts</option>
+                    <option value="Biceps">Biceps</option>
+                    <option value="Triceps">Triceps</option>
+                    <option value="Quads">Quads</option>
+                    <option value="Hamstrings">Hamstrings</option>
+                    <option value="Glutes">Glutes</option>
+                    <option value="Calves">Calves</option>
+                    <option value="Core">Core</option>
+                </select>
+
+                <input type="number" id="minRepsInput" placeholder="Min reps" min="1" />
+                <input type="number" id="maxRepsInput" placeholder="Max reps" min="1" />
+
+                <button onclick="addExercise()">Add Exercise</button>
+            </div>
+
+            <h2 class="section-title">Progress Chart</h2>
+            <div class="summary-card">
+                <canvas id ="progressChart"></canvas>
+            </div>
+
+
+
+
+
+            <div id="exerciseList"></div>
+        </div>
+    </div>
+
+    <script src ="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src ="app.js"></script>
+
+</body>
+</html>
